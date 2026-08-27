@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Build de Metro y React Native
+.expo/
+dist/
+ios/Pods/
+android/.gradle/
+android/app/build/
+
+# Bases de datos locales SQLite (para no subir datos de prueba)
+*.sqlite
+*.sqlite-journal
+
+# Archivos del sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+*.log

@@ -2,6 +2,12 @@
 
 Aplicación móvil desarrollada con React Native CLI, TypeScript y Firebase (Firestore), enfocada en una arquitectura de BaaS (Backend-as-a-Service) para garantizar agilidad y sincronización en tiempo real.
 
+## Arquitectura y Enfoque
+El proyecto adopta un enfoque monolítico modular, diseñado para mantener una separación clara de responsabilidades:
+* **Capa de Presentación:** Componentes y pantallas organizados por flujos de usuario (`src/screens`).
+* **Capa de Servicios:** Lógica de negocio abstraída e interacción directa con Firebase Firestore (`src/services`).
+* **Capa Nativa:** Configuración optimizada para Android (`android/`) e iOS (`ios/`).
+
 ## Matriz Técnica
 
 | Componente | Tecnología / Librería | Descripción |

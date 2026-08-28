@@ -1,4 +1,4 @@
-# MiAppMonolito - Aplicación Móvil
+# MiAppMonolito - Aplicación Móvil Monolitica con iOS y Android 
 
 Aplicación móvil monolítica desarrollada con React Native, TypeScript, TypeORM y SQLite para la gestión local de datos y estructura escalable.
 

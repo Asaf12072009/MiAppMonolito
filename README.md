@@ -22,11 +22,12 @@ El proyecto adopta un enfoque monolítico modular, diseñado para mantener una s
 | Componente | Tecnología / Librería | Descripción |
 | :--- | :--- | :--- |
 | **Lenguaje Base** | TypeScript | Tipado estricto y robustez para la lógica de la aplicación. |
-| **Framework Móvil** | React Native CLI (v0.87.1) | Desarrollo nativo multiplataforma (Android e iOS). |
+| **Framework Móvil/Web** | React Native CLI (v0.87.1) + react-native-web | Desarrollo multiplataforma (Android, iOS y Navegador Web). |
 | **Base de Datos / BaaS** | Firebase Firestore | Base de datos NoSQL en la nube de alta disponibilidad. |
-| **Empaquetador** | Metro Bundler | Configuración personalizada (`metro.config.js`) para la optimización de assets. |
+| **Empaquetador (Web)** | Webpack + react-native-web | Configuración personalizada (`webpack.config.js`) para compilar RN a JS/HTML. |
+| **Empaquetador (Móvil)** | Metro Bundler | Configuración personalizada (`metro.config.js`) para la optimización de assets. |
 | **Gestión de Dependencias** | npm | Control de paquetes y scripts del entorno. |
-| **Control de Versiones** | Git & GitHub | Repositorio remoto sincronizado con la rama principal `main`. |
+| **Control de Versiones** | Git & GitHub | Repositorio remoto sincronizado con la rama principal `main`. 
 
 ## Layout del Proyecto
 
@@ -34,18 +35,18 @@ El proyecto adopta un enfoque monolítico modular, diseñado para mantener una s
 MiAppMonolito/
 ├── public/              # Archivos estáticos que se copian al construir (index.html, favicon.ico)
 │   └── index.html       # HTML principal de la aplicación (punto de entrada web)
-├── src/                 # Código fuente principal
-│   ├── index.ts         # Punto de entrada de la aplicación (JSX/TSX)
+├── src/                 # Código fuente principal (compartido entre móvil y web)
+│   ├── index.ts         # Punto de entrada principal (manipula el renderizado según plataforma)
 │   ├── App.tsx          # Componente raíz de la aplicación
 │   ├── screens/         # Vistas y pantallas de la interfaz de usuario
-│   └── services/        # Lógica de negocio y operaciones con Firebase
-├── android/             # Configuración y código nativo de Android
-├── ios/                 # Configuración y código nativo de iOS
+│   └── services/        # Lógica de negocio y operaciones con Firebase Firestore
+├── android/             # Configuración y código nativo de Android (Gradle, MainActivity.java/kotlin)
+├── ios/                 # Configuración y código nativo de iOS (Xcode, AppDelegate.m)
 ├── .gitignore           # Archivos excluidos del control de versiones
-├── .gitattributes       # Normalización de saltos de línea
-├── app.json             # Configuración del nombre de la app
-├── index.web.js         # Punto de entrada para la versión web
-├── metro.config.js      # Configuración de Metro bundler
-├── package.json         # Dependencias y scripts
-├── tsconfig.json        # Configuración de TypeScript
-└── webpack.config.js    # Configuración de webpack para el build web
+├── .gitattributes       # Normalización de saltos de línea (eol=lf)
+├── app.json             # Configuración del nombre y identidad del proyecto
+├── index.web.js         # Punto de entrada específico para la compilación Web
+├── metro.config.js      # Configuración del empaquetador Metro (Mobile)
+├── package.json         # Dependencias, scripts y metadatos del proyecto
+├── tsconfig.json        # Configuración del compilador TypeScript
+└── webpack.config.js    # Configuración de webpack para el build de la aplicación Web

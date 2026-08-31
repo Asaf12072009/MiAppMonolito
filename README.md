@@ -32,16 +32,20 @@ El proyecto adopta un enfoque monolítico modular, diseñado para mantener una s
 
 ```text
 MiAppMonolito/
-├── android/             # Configuración y código nativo de Android (Gradle)
-├── ios/                 # Configuración y código nativo de iOS
-├── src/                 # Código fuente principal de la aplicación
-│   ├── screens/         # Vistas y pantallas de la interfaz de usuario
-│   ├── services/        # Lógica de negocio y operaciones con Firebase (ej. userService.ts)
+├── public/              # Archivos estáticos que se copian al construir (index.html, favicon.ico)
+│   └── index.html       # HTML principal de la aplicación (punto de entrada web)
+├── src/                 # Código fuente principal
+│   ├── index.ts         # Punto de entrada de la aplicación (JSX/TSX)
 │   ├── App.tsx          # Componente raíz de la aplicación
-│   └── index.js         # Punto de entrada y registro del componente principal
-├── .gitignore           # Archivos y carpetas excluidas del control de versiones
-├── .gitattributes       # Normalización de saltos de línea (eol=lf)
-├── app.json             # Configuración del nombre e identidad del proyecto
-├── metro.config.js      # Configuración del empaquetador Metro
-├── package.json         # Dependencias, scripts y metadatos del proyecto
-└── tsconfig.json        # Configuración del compilador de TypeScript
+│   ├── screens/         # Vistas y pantallas de la interfaz de usuario
+│   └── services/        # Lógica de negocio y operaciones con Firebase
+├── android/             # Configuración y código nativo de Android
+├── ios/                 # Configuración y código nativo de iOS
+├── .gitignore           # Archivos excluidos del control de versiones
+├── .gitattributes       # Normalización de saltos de línea
+├── app.json             # Configuración del nombre de la app
+├── index.web.js         # Punto de entrada para la versión web
+├── metro.config.js      # Configuración de Metro bundler
+├── package.json         # Dependencias y scripts
+├── tsconfig.json        # Configuración de TypeScript
+└── webpack.config.js    # Configuración de webpack para el build web

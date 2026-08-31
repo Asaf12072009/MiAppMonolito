@@ -50,3 +50,8 @@ MiAppMonolito/
 ├── package.json         # Dependencias, scripts y metadatos del proyecto
 ├── tsconfig.json        # Configuración del compilador TypeScript
 └── webpack.config.js    # Configuración de webpack para el build de la aplicación Web
+
+Notas Importantes
+React Native Web: La aplicación se construye para funcionar en navegadores modernos. La configuración de webpack es clave para transformar los componentes de React Native a HTML/CSS compatible.
+Firebase: La lógica de services/ es compartida, lo que asegura que el comportamiento de la aplicación sea consistente en móvil y web.
+Scripts de construcción: En package.json, deberías tener comandos como npm start (para desarrollo en móvil), npm run web (para desarrollo en web) y npm run build (para compilación final).

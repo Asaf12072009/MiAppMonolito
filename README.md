@@ -39,6 +39,18 @@ El proyecto adopta un enfoque monolítico modular, diseñado para mantener una s
 
 ---
 
+## 🔧 Soporte Nativo y Dependencias
+
+Aunque el 100% de la lógica de negocio y las interfaces de usuario se desarrollan utilizando **TypeScript**, el proyecto integra archivos de código nativo en las carpetas `/android` e `/ios`. Esto se debe a la instalación de módulos y librerías de terceros (como el SDK de Firebase), que requieren andamiaje e interoperabilidad en los siguientes lenguajes:
+
+* 🤖 **Kotlin:** Utilizado en las configuraciones modernas y dependencias del entorno de Android. <img src="https://shields.io" alt="Kotlin" valign="middle" />
+* 🍏 **Objective-C / Objective-C++:** Presente en los módulos nativos tradicionales y puentes (bridges) de iOS. <img src="https://shields.io" alt="Objective-C" valign="middle" /> <img src="https://shields.io" alt="Objective-C++" valign="middle" />
+* 💎 **Ruby:** Empleado exclusivamente para la gestión de dependencias nativas a través de CocoaPods (`Podfile` y `Gemfile`). <img src="https://shields.io" alt="Ruby" valign="middle" />
+
+Todo este entorno nativo viene preconfigurado por las dependencias instaladas, permitiendo que la aplicación se ejecute con un rendimiento óptimo en cada sistema operativo sin necesidad de alterar manualmente el código base móvil.
+
+---
+
 ## 📂 Layout del Proyecto
 
 Estructura organizada de directorios orientada al desarrollo multiplataforma con código fuente unificado:

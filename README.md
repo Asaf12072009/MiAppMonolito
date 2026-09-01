@@ -10,13 +10,22 @@
 
 Aplicación móvil desarrollada con React Native CLI, TypeScript y Firebase (Firestore), enfocada en una arquitectura de BaaS (Backend-as-a-Service) para garantizar agilidad y sincronización en tiempo real.
 
-## Arquitectura y Enfoque
+---
+
+## 🏗️ Arquitectura y Enfoque
+
 El proyecto adopta un enfoque monolítico modular, diseñado para mantener una separación clara de responsabilidades:
 * **Capa de Presentación:** Componentes y pantallas organizados por flujos de usuario (`src/screens`).
 * **Capa de Servicios:** Lógica de negocio abstraída e interacción directa con Firebase Firestore (`src/services`).
 * **Capa Nativa:** Configuración optimizada para Android (`android/`) e iOS (`ios/`).
 
-## Matriz Técnica
+### 💡 Notas de Arquitectura
+* **React Native Web:** La aplicación está optimizada para funcionar en navegadores modernos. El archivo `webpack.config.js` es la pieza clave que transforma los componentes nativos en elementos HTML/CSS compatibles.
+* **Firebase Core:** Toda la capa de servicios en `src/services/` es agnóstica a la plataforma. Esto garantiza una sincronización y comportamiento idénticos entre iOS, Android y Web.
+
+---
+
+## 📊 Matriz Técnica
 
 | Componente | Tecnología / Librería | Descripción |
 | :--- | :--- | :--- |
@@ -26,32 +35,34 @@ El proyecto adopta un enfoque monolítico modular, diseñado para mantener una s
 | **Empaquetador (Web)** | Webpack + react-native-web | Configuración personalizada (`webpack.config.js`) para compilar RN a JS/HTML. |
 | **Empaquetador (Móvil)** | Metro Bundler | Configuración personalizada (`metro.config.js`) para la optimización de assets. |
 | **Gestión de Dependencias** | npm | Control de paquetes y scripts del entorno. |
-| **Control de Versiones** | Git & GitHub | Repositorio remoto sincronizado con la rama principal `main`. 
+| **Control de Versiones** | Git & GitHub | Repositorio remoto sincronizado con la rama principal `main`. |
 
-## Layout del Proyecto
+---
+
+## 📂 Layout del Proyecto
+
+Estructura organizada de directorios orientada al desarrollo multiplataforma con código fuente unificado:
 
 ```text
 MiAppMonolito/
-├── public/              # Archivos estáticos que se copian al construir (index.html, favicon.ico)
-│   └── index.html       # HTML principal de la aplicación (punto de entrada web)
-├── src/                 # Código fuente principal (compartido entre móvil y web)
-│   ├── index.ts         # Punto de entrada principal (manipula el renderizado según plataforma)
+├── public/              # Archivos estáticos globales (index.html, favicon.ico)
+├── src/                 # Código fuente principal (Lógica compartida)
+│   ├── screens/         # Vistas, componentes y pantallas de la interfaz de usuario
+│   ├── services/        # Lógica de negocio e integraciones (Firebase Firestore)
 │   ├── App.tsx          # Componente raíz de la aplicación
-│   ├── screens/         # Vistas y pantallas de la interfaz de usuario
-│   └── services/        # Lógica de negocio y operaciones con Firebase Firestore
-├── android/             # Configuración y código nativo de Android (Gradle, MainActivity.java/kotlin)
-├── ios/                 # Configuración y código nativo de iOS (Xcode, AppDelegate.m)
-├── .gitignore           # Archivos excluidos del control de versiones
-├── .gitattributes       # Normalización de saltos de línea (eol=lf)
-├── app.json             # Configuración del nombre y identidad del proyecto
-├── index.web.js         # Punto de entrada específico para la compilación Web
+│   └── index.ts         # Punto de entrada principal (Enrutamiento por plataforma)
+├── android/             # Entorno nativo y configuración de Android (Gradle)
+├── ios/                 # Entorno nativo y configuración de iOS (Xcode / CocoaPods)
+├── app.json             # Identidad y metadatos compartidos del proyecto
+├── index.web.js         # Punto de entrada exclusivo para la plataforma Web
 ├── metro.config.js      # Configuración del empaquetador Metro (Mobile)
-├── package.json         # Dependencias, scripts y metadatos del proyecto
 ├── tsconfig.json        # Configuración del compilador TypeScript
-└── webpack.config.js    # Configuración de webpack para el build de la aplicación Web
+└── webpack.config.js    # Configuración de Webpack para empaquetado Web
+```
 
+---
 
-## Scripts de Construcción
+## 🚀 Scripts de Construcción
 
 Utiliza los siguientes comandos en la raíz del proyecto para el ciclo de desarrollo y producción:
 
@@ -60,10 +71,3 @@ Utiliza los siguientes comandos en la raíz del proyecto para el ciclo de desarr
 | `npm start` | Inicia el empaquetador Metro en modo desarrollo. | 📱 Móvil |
 | `npm run web` | Levanta el servidor de desarrollo local para navegadores. | 🌐 Web |
 | `npm run build` | Compila y optimiza la aplicación Web para producción. | 📦 Web |
-
-### Notas de Arquitectura
-
-*   **React Native Web:** La aplicación está optimizada para funcionar en navegadores modernos. El archivo `webpack.config.js` es la pieza clave que transforma los componentes nativos en elementos HTML/CSS compatibles.
-*   **Firebase Core:** Toda la capa de servicios en `src/services/` es agnóstica a la plataforma. Esto garantiza una sincronización y comportamiento idénticos entre iOS, Android y Web.
-
----

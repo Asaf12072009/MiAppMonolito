@@ -6,11 +6,11 @@
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
   <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS" />
-  <img src="https://shields.io" alt="Kotlin" />
-  <img src="https://shields.io" alt="Objective-C" />
-  <img src="https://shields.io" alt="Objective-C++" />
-  <img src="https://shields.io" alt="Ruby" />
-  <img src="https://shields.io" alt="Cocoapods" />
+  <img src="https://img.shields.io/badge/Kotlin-0073EC?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/Objective--C-4E5B6E?style=for-the-badge&logo=apple&logoColor=white" alt="Objective-C" />
+  <img src="https://img.shields.io/badge/Objective--C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="Objective-C++" />
+  <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby" />
+  <img src="https://img.shields.io/badge/Cocoapods-FA4E30?style=for-the-badge&logo=cocoapods&logoColor=white" alt="Cocoapods" />
 </p>
 
 Aplicación móvil desarrollada con React Native CLI, TypeScript y Firebase (Firestore), enfocada en una arquitectura de BaaS (Backend-as-a-Service) para garantizar agilidad y sincronización en tiempo real.

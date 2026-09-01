@@ -17,3 +17,6 @@ android/app/build/
 Thumbs.db
 .vscode/
 *.log
+
+# Carpeta unica de temp-ios no subirse asegurarse de eliminarla o si falta sacar archivos importntes y migrar hacia la carpeta ios/ de la raiz 
+temp-ios/

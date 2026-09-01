@@ -6,6 +6,10 @@
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
   <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS" />
+  <img alt="Cocoapods platforms" src="https://img.shields.io/cocoapods/p/:spec">
+  <img src="https://shields.io" alt="Kotlin" valign="middle" />
+  <img src="https://shields.io" alt="Objective-C" valign="middle" /> <img src="https://shields.io" alt="Objective-C++" valign="middle" />
+  <img src="https://shields.io" alt="Ruby" valign="middle" />
 </p>
 
 Aplicación móvil desarrollada con React Native CLI, TypeScript y Firebase (Firestore), enfocada en una arquitectura de BaaS (Backend-as-a-Service) para garantizar agilidad y sincronización en tiempo real.

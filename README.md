@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
   <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License MIT" />
 </p>
 
 Aplicación móvil desarrollada con React Native CLI, TypeScript y Firebase (Firestore), enfocada en una arquitectura de BaaS (Backend-as-a-Service) para garantizar agilidad y sincronización en tiempo real.
@@ -51,7 +50,20 @@ MiAppMonolito/
 ├── tsconfig.json        # Configuración del compilador TypeScript
 └── webpack.config.js    # Configuración de webpack para el build de la aplicación Web
 
-Notas Importantes
-React Native Web: La aplicación se construye para funcionar en navegadores modernos. La configuración de webpack es clave para transformar los componentes de React Native a HTML/CSS compatible.
-Firebase: La lógica de services/ es compartida, lo que asegura que el comportamiento de la aplicación sea consistente en móvil y web.
-Scripts de construcción: En package.json, deberías tener comandos como npm start (para desarrollo en móvil), npm run web (para desarrollo en web) y npm run build (para compilación final).
+
+## Scripts de Construcción
+
+Utiliza los siguientes comandos en la raíz del proyecto para el ciclo de desarrollo y producción:
+
+| Comando | Descripción | Plataforma |
+| :--- | :--- | :--- |
+| `npm start` | Inicia el empaquetador Metro en modo desarrollo. | 📱 Móvil |
+| `npm run web` | Levanta el servidor de desarrollo local para navegadores. | 🌐 Web |
+| `npm run build` | Compila y optimiza la aplicación Web para producción. | 📦 Web |
+
+### Notas de Arquitectura
+
+*   **React Native Web:** La aplicación está optimizada para funcionar en navegadores modernos. El archivo `webpack.config.js` es la pieza clave que transforma los componentes nativos en elementos HTML/CSS compatibles.
+*   **Firebase Core:** Toda la capa de servicios en `src/services/` es agnóstica a la plataforma. Esto garantiza una sincronización y comportamiento idénticos entre iOS, Android y Web.
+
+---

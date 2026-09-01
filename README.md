@@ -6,10 +6,11 @@
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
   <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS" />
-  <img alt="Cocoapods platforms" src="https://img.shields.io/cocoapods/p/:spec">
-  <img src="https://shields.io" alt="Kotlin" valign="middle" />
-  <img src="https://shields.io" alt="Objective-C" valign="middle" /> <img src="https://shields.io" alt="Objective-C++" valign="middle" />
-  <img src="https://shields.io" alt="Ruby" valign="middle" />
+  <img src="https://shields.io" alt="Kotlin" />
+  <img src="https://shields.io" alt="Objective-C" />
+  <img src="https://shields.io" alt="Objective-C++" />
+  <img src="https://shields.io" alt="Ruby" />
+  <img src="https://shields.io" alt="Cocoapods" />
 </p>
 
 Aplicación móvil desarrollada con React Native CLI, TypeScript y Firebase (Firestore), enfocada en una arquitectura de BaaS (Backend-as-a-Service) para garantizar agilidad y sincronización en tiempo real.
@@ -47,9 +48,9 @@ El proyecto adopta un enfoque monolítico modular, diseñado para mantener una s
 
 Aunque el 100% de la lógica de negocio y las interfaces de usuario se desarrollan utilizando **TypeScript**, el proyecto integra archivos de código nativo en las carpetas `/android` e `/ios`. Esto se debe a la instalación de módulos y librerías de terceros (como el SDK de Firebase), que requieren andamiaje e interoperabilidad en los siguientes lenguajes:
 
-* 🤖 **Kotlin:** Utilizado en las configuraciones modernas y dependencias del entorno de Android. <img src="https://shields.io" alt="Kotlin" valign="middle" />
-* 🍏 **Objective-C / Objective-C++:** Presente en los módulos nativos tradicionales y puentes (bridges) de iOS. <img src="https://shields.io" alt="Objective-C" valign="middle" /> <img src="https://shields.io" alt="Objective-C++" valign="middle" />
-* 💎 **Ruby:** Empleado exclusivamente para la gestión de dependencias nativas a través de CocoaPods (`Podfile` y `Gemfile`). <img src="https://shields.io" alt="Ruby" valign="middle" />
+* 🤖 **Kotlin:** Utilizado en las configuraciones modernas y dependencias del entorno de Android.
+* 🍏 **Objective-C / Objective-C++:** Presente en los módulos nativos tradicionales y puentes (bridges) de iOS. 
+* 💎 **Ruby:** Empleado exclusivamente para la gestión de dependencias nativas a través de CocoaPods (`Podfile` y `Gemfile`). 
 
 Todo este entorno nativo viene preconfigurado por las dependencias instaladas, permitiendo que la aplicación se ejecute con un rendimiento óptimo en cada sistema operativo sin necesidad de alterar manualmente el código base móvil.
 

@@ -56,6 +56,18 @@ Todo este entorno nativo viene preconfigurado por las dependencias instaladas, p
 
 ---
 
+## 🛠️ Herramientas de Documentación
+
+Las insignias visuales utilizadas en este repositorio para identificar las tecnologías y el estado del proyecto fueron generadas a través de:
+
+<p align="left">
+  <img src="https://shields.io" alt="Shields.io" />
+</p>
+
+* **Shields.io:** Servicio de generación de insignias concisas, consistentes y legibles en formato SVG de alta calidad.
+
+---
+
 ## 📂 Layout del Proyecto
 
 Estructura organizada de directorios orientada al desarrollo multiplataforma con código fuente unificado:

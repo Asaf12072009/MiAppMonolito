@@ -56,16 +56,11 @@ Todo este entorno nativo viene preconfigurado por las dependencias instaladas, p
 
 > 💡 **Nota de Configuración (Filtro de Lenguajes):** Si deseas que la barra de estadísticas de GitHub ignore por completo este andamiaje nativo de terceros y muestre únicamente tu código principal en las estadísticas, agrega las reglas de exclusión en el archivo `.gitattributes` y ejecuta los siguientes comandos en tu terminal para forzar el re-escaneo. Añadir en gitratributes/ (si es necesario):
 
-# Normalización de saltos de línea para consistencia entre Windows, Mac y Linux
 * text=auto eol=lf
-
-# Ocultar carpetas y dependencias nativas de las estadísticas de lenguajes de GitHub
 android/**/* linguist-documentation=false linguist-vendored
 ios/**/* linguist-documentation=false linguist-vendored
 public/**/* linguist-documentation=false linguist-vendored
 node_modules/**/* linguist-documentation=false linguist-vendored
-
-# Asegurar que los archivos de configuración no alteren los porcentajes
 *.json linguist-documentation=false linguist-vendored
 *.config.js linguist-documentation=false linguist-vendored
 
